@@ -23,18 +23,18 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() ?>">
+        <a class="nav-link" href="<?php echo base_url('dataCustomer') ?>">
           <i class="fas fa-book-open"></i>
           <span>Data Buku</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('dataMerek') ?>">
+        <a class="nav-link" href="<?php echo base_url('dataProperty') ?>">
           <i class="fas fa-user-friends"></i>
           <span>Data Anggota</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('dataMerek') ?>">
+        <a class="nav-link" href="<?php echo base_url('DataSale') ?>">
           <i class="fas fa-people-arrows"></i>
           <span>Peminjaman</span></a>
       </li>
