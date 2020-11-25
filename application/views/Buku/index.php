@@ -14,7 +14,7 @@ $(document).ajaxStart(function() {
 $(document).ready(function() {
     $.ajax({
         type: 'POST',
-        url: "<?php echo base_url(); ?>/DataCustomer/tampilCustomer",
+        url: "<?php echo base_url(); ?>/dataBuku/tampilBuku",
         cache: false,
         success: function(data) {
             $("#tampil").html(data);

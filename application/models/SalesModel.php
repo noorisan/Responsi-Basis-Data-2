@@ -7,8 +7,8 @@ class SalesModel extends CI_Model{
 	function Getid($idSalesman = ''){
       return $this->db->get_where('salesman', array('idSalesman' => $idSalesman))->row();
     }
-    function GetidCustomer($idCustomer = ''){
-      return $this->db->get_where('customer', array('idCustomer' => $idCustomer))->row();
+    function GetidBuku($idBuku = ''){
+      return $this->db->get_where('Buku', array('idBuku' => $idBuku))->row();
     }
     function GetidProperty($idProduk = ''){
       return $this->db->get_where('produk', array('idProduk' => $idProduk))->row();

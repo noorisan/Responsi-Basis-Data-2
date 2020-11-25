@@ -23,7 +23,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('dataCustomer') ?>">
+        <a class="nav-link" href="<?php echo base_url('dataBuku') ?>">
           <i class="fas fa-book-open"></i>
           <span>Data Buku</span></a>
       </li>

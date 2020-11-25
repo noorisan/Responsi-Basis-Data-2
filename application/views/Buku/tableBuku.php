@@ -5,24 +5,30 @@
   
   <thead class="thead-dark text-center">
     <tr>
-    <th >No</th>
-    <th >ID Customer</th>
-    <th >Nama</th>
-    <th >Alamat</th>
+    <th >ID Buku</th>
+    <th >Judul Buku</th>
+    <th >Jenis Buku</th>
+    <th >Pengarang</th>
+    <th>Tahun Terbit</th>
+    <th>ISBN</th>
+    <th>Jumlah Buku</th>
     <th>Aksi</th>
   </tr>
   </thead>
   <tbody>
-    <?php $no=1;foreach ($customer as $c): ?>
-    <tr class="bg-light">
-      <td align="center"><?php echo $no++; ?></td>
-      <td><?php echo $c->idCustomer; ?></td>
-      <td><?php echo $c->namaCustomer; ?></td>
-      <td><?php echo $c->alamat; ?></td>
+    <?php foreach ($buku as $c): ?>
+    <tr class="bg-light text-center">
+      <td><?php echo $c->idBuku; ?></td>
+      <td><?php echo $c->namaBuku; ?></td>
+      <td><?php echo $c->jenisBuku; ?></td>
+      <td><?php echo $c->Pengarang; ?></td>
+      <td><?php echo $c->tahunTerbit; ?></td>
+      <td><?php echo $c->ISBN; ?></td>
+      <td><?php echo $c->jmlhBuku; ?></td>
       <td>
         <center>
-          <button type="button" idCustomer="<?php echo $c->idCustomer; ?>" class="edit btn btn-warning"><i class="fas fa-edit"></i></button>
-          <button type="button" idCustomer="<?php echo $c->idCustomer; ?>" class="hapus btn btn-danger"> <i class="fas fa-trash"></i></button>
+          <button type="button" idBuku="<?php echo $c->idBuku; ?>" class="edit btn btn-warning"><i class="fas fa-edit"></i></button>
+          <button type="button" idBuku="<?php echo $c->idBuku; ?>" class="hapus btn btn-danger"> <i class="fas fa-trash"></i></button>
         </center>
       </td>
     </tr>
@@ -32,7 +38,7 @@
 </div>
 
 <!-- The Modal -->
-        <div class="modal fade" id="myModal">
+        <div class="modal" id="myModal" >
             <div class="modal-dialog">
                 <div class="modal-content">
                 <!-- Modal Header -->
@@ -59,9 +65,9 @@
             $(document).ready(function(){
 
                 $('.tambah').click(function(){
-                var aksi = 'Tambah Customer';
+                var aksi = 'Tambah Buku';
                 $.ajax({
-                    url: '<?php echo base_url(); ?>/DataCustomer/tambah',
+                    url: '<?php echo base_url(); ?>/DataBuku/tambah',
                     method: 'post',
                     data: {aksi:aksi},
                     success:function(data){
@@ -75,11 +81,11 @@
 
                 $('.edit').click(function(){
 
-                    var idCustomer = $(this).attr("idCustomer");
+                    var idBuku = $(this).attr("idBuku");
                     $.ajax({
-                        url: '<?php echo base_url(); ?>/DataCustomer/edit',
+                        url: '<?php echo base_url(); ?>/DataBuku/edit',
                         method: 'post',
-                        data: {idCustomer:idCustomer},
+                        data: {idBuku:idBuku},
                         success:function(data){
                             $('#myModal').modal("show");
                             $('#tampil_modal').html(data);
@@ -90,11 +96,11 @@
 
                 $('.hapus').click(function(){
 
-                    var idCustomer = $(this).attr("idCustomer");
+                    var idBuku = $(this).attr("idBuku");
                     $.ajax({
-                        url: '<?php echo base_url(); ?>/DataCustomer/hapus',
+                        url: '<?php echo base_url(); ?>/DataBuku/hapus',
                         method: 'post',
-                        data: {idCustomer:idCustomer},
+                        data: {idBuku:idBuku},
                         success:function(data){
                             $('#myModal').modal("show");
                             $('#tampil_modal').html(data);
