@@ -1,7 +1,7 @@
 <?php 
 	class dataCustomer extends CI_Controller{
 	public function index(){
-		$data['title']="Data Customer";
+		$data['title']="Data Buku";
 		$data['Customer']=$this->SalesModel->get_data('customer')->result();
 		$this->load->view('header',$data);
 		$this->load->view('sidebar');

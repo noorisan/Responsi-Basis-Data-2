@@ -1,7 +1,7 @@
 <?php 
 	class dataSale extends CI_Controller{
 	public function index(){
-		$data['title']="Data Penjualan";
+		$data['title']="Data Peminjaman";
 		$data['Sale']=$this->SalesModel->get_data('Sale')->result();
 		$this->load->view('header',$data);
 		$this->load->view('sidebar');

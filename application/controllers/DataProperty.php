@@ -1,7 +1,7 @@
 <?php 
 	class dataProperty extends CI_Controller{
 	public function index(){
-		$data['title']="Data Property";
+		$data['title']="Data Anggota";
 		$data['Property']=$this->SalesModel->get_data('produk')->result();
 		$this->load->view('header',$data);
 		$this->load->view('sidebar');
