@@ -9,7 +9,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url(); ?>">
         
-        <div class="sidebar-brand-text mx-3 ">APP Salesman</div>
+        <div class="sidebar-brand-text mx-3 ">Perpustakaan</div>
       </a>
 
       <!-- Divider -->
@@ -65,12 +65,6 @@
         </div>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() ?>">
-          <i class="fas fa-fw fa-lock"></i>
-          <span>Ubah Password</span></a>
-      </li>
-
       <!-- Nav Item - Tables -->
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url() ?>">
@@ -100,7 +94,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <H4 class="font-weight-bold">PT. INDONESIA PROPERTY</H4>
+          <H4 class="font-weight-bold">PERPUSTAKAAN DAERAH</H4>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
