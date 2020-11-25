@@ -22,32 +22,21 @@
           <span>Dashboard</span></a>
       </li>
 
-      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-database"></i>
-          <span>Master Data</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?php echo base_url('dataSalesman') ?>">Data Salesman</a>
-            <a class="collapse-item" href="<?php echo base_url('dataCustomer') ?>">Data Customer</a>
-            <a class="collapse-item" href="<?php echo base_url('dataProperty') ?>">Data Property</a>
-          </div>
-        </div>
+        <a class="nav-link" href="<?php echo base_url() ?>">
+          <i class="fas fa-tshirt"></i>
+          <span>Data Buku</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('dataMerek') ?>">
+          <i class="fas fa-star"></i>
+          <span>Data Anggota</span></a>
       </li>
 
-      <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-money-check-alt"></i>
-          <span>Transaksi</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?php echo base_url('dataSale') ?>">Pembelian</a>
-          </div>
-        </div>
+        <a class="nav-link" href="<?php echo base_url('dataMerek') ?>">
+          <i class="fas fa-star"></i>
+          <span>Peminjaman</span></a>
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
@@ -58,9 +47,9 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?php echo base_url('admin/laporanGaji') ?>">Laporan transaksi</a>
-            <a class="collapse-item" href="<?php echo base_url('admin/laporanAbsensi') ?>">Laporan Komisi</a>
-            <a class="collapse-item" href="<?php echo base_url('admin/slipGaji') ?>">Slip Komisi</a>
+            <a class="collapse-item" href="<?php echo base_url('admin/laporanGaji') ?>">Laporan Data Buku</a>
+            <a class="collapse-item" href="<?php echo base_url('admin/laporanAbsensi') ?>">Laporan Data Angggota</a>
+            <a class="collapse-item" href="<?php echo base_url('admin/slipGaji') ?>">Laporan Peminjaman</a>
           </div>
         </div>
       </li>
