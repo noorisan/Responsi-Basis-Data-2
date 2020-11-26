@@ -12,5 +12,8 @@ class bukuModel extends CI_Model{
     function GetidPeminjaman($idPeminjaman = ''){
       return $this->db->get_where('Peminjaman', array('idPeminjaman' => $idPeminjaman))->row();
     }
+    function GetidPetugas($idPetugas = ''){
+      return $this->db->get_where('Petugas', array('idPetugas' => $idPetugas))->row();
+    }
 }
 ?>
