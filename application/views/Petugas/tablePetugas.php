@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
 <button type="button" class="tambah btn btn-sm btn-success mb-2"><i class="fas fa-plus">Tambah Data</i></button>
-<table class="table table-bordered table-stiped table-sm table-responsive-md mt-2">
+<table class="table table-bordered table-stiped table-sm table-responsive-md mt-2" id="tablePetugas">
   
   <thead class="thead-dark text-center">
     <tr>
@@ -102,5 +102,8 @@
                         }
                     });
                     });
+            });
+            $(document).ready(function () {
+                $('#tablePetugas').DataTable();
             });
         </script>
