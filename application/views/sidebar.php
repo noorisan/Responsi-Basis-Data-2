@@ -9,7 +9,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url(); ?>">
         
-        <div class="sidebar-brand-text mx-3 ">Perpustakaan</div>
+        <div class="sidebar-brand-text mx-3 "> Perpustakaan</div>
       </a>
 
       <!-- Divider -->
@@ -28,13 +28,13 @@
           <span>Data Buku</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('dataProperty') ?>">
+        <a class="nav-link" href="<?php echo base_url('dataAnggota') ?>">
           <i class="fas fa-user-friends"></i>
           <span>Data Anggota</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('DataSale') ?>">
+        <a class="nav-link" href="<?php echo base_url('dataPeminjaman') ?>">
           <i class="fas fa-people-arrows"></i>
           <span>Peminjaman</span></a>
       </li>
@@ -83,7 +83,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <H4 class="font-weight-bold">PERPUSTAKAAN DAERAH</H4>
+          <H4 class="font-weight-bold"> <i class="fas fa-book-open"></i> PERPUSTAKAAN DAERAH</H4>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">

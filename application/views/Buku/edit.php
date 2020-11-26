@@ -10,7 +10,7 @@
     <div class="form-group">
             <label>Jenis Buku:</label>
         <select class="form-control" name="jenisBuku">
-            <option value="">--pilih jenis buku--</option>
+            <option value="<?php echo $hasil->jenisBuku; ?>"><?php echo $hasil->jenisBuku; ?></option>
             <option value="Agama">Agama</option>
             <option value="Biografi">Biografi</option>
             <option value="Fiksi">Fiksi</option>

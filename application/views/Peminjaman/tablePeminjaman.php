@@ -1,32 +1,38 @@
 <div class="container-fluid">
 
   <button type="button" class="tambah btn btn-sm btn-success mb-2"><i class="fas fa-plus">Tambah Data</i></button>
-<table class="table table-bordered table-stiped table-sm table-responsive-md mt-2">
+<table class="table table-bordered table-stiped table-sm table-responsive-lg mt-2">
   
   <thead class="thead-dark text-center">
     <tr>
-    <th >No</th>
-    <th >Id Salesman</th>
-    <th >Nama</th>
-    <th >Komisi</th>
-    <th >Target Jual</th>
-    <th >Produk Terjual</th>
+    <th >ID Peminjaman</th>
+    <th >ID Anggota</th>
+    <th >ID Buku</th>
+    <th >ID Petugas</th>
+    <th >Jumlah Pinjam</th>
+    <th >Tanggal Pinjam</th>
+    <th >Tanggal Kembali</th>
+    <th>Status</th>
     <th>Aksi</th>
   </tr>
   </thead>
   <tbody>
-    <?php $no=1;foreach ($salesman as $s): ?>
-    <tr class="bg-light">
-      <td align="center"><?php echo $no++; ?></td>
-      <td><?php echo $s->idSalesman; ?></td>
-      <td><?php echo $s->namaSalesman; ?></td>
-      <td>Rp. <?php echo number_format($s->komisiSalesman,0,',','.'); ?></td>
-      <td align="center"><?php echo $s->targetSales; ?></td>
-      <td align="center"><?php echo $s->produkTerjual; ?></td>
+    <?php foreach ($Peminjaman as $c): ?>
+    <tr class="bg-light" align="center">
+      <td><?php echo $c->idPeminjaman; ?></td>
+      <td><?php echo $c->idAnggota; ?></td>
+      <td><?php echo $c->idBuku; ?></td>
+      <td><?php echo $c->idPetugas; ?></td>
+      <td><?php echo $c->jmlhPinjam; ?></td>
+      <td><?php echo $c->tglPinjam; ?></td>
+      <td><?php echo $c->tglKembali; ?></td>
+      <td><?php echo $c->statusBuku; ?></td>
       <td>
         <center>
-          <button type="button" idSalesman="<?php echo $s->idSalesman; ?>" class="edit btn btn-warning"><i class="fas fa-edit"></i></button>
-          <button type="button" idSalesman="<?php echo $s->idSalesman; ?>" class="hapus btn btn-danger"> <i class="fas fa-trash"></i></button>
+          <button type="button" idPeminjaman="<?php echo $c->idPeminjaman; ?>" class="edit btn btn-warning"><i class="fas fa-edit"></i>
+          </button>
+          <button type="button" idPeminjaman="<?php echo $c->idPeminjaman; ?>" class="hapus btn btn-danger"> <i class="fas fa-trash"></i>
+          </button>
         </center>
       </td>
     </tr>
@@ -34,10 +40,8 @@
   </tbody>
 </table>
 </div>
-
-<!-- Button to Open the Modal -->
-        <!-- The Modal -->
-        <div class="modal fade" id="myModal">
+<!-- The Modal -->
+        <div class="modal" id="myModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                 <!-- Modal Header -->
@@ -59,14 +63,13 @@
                 </div>
             </div>
         </div>
-
-        <script>
+<script>
             $(document).ready(function(){
 
                 $('.tambah').click(function(){
-                var aksi = 'Tambah Salesman';
+                var aksi = 'Tambah Peminjaman';
                 $.ajax({
-                    url: '<?php echo base_url(); ?>/DataSalesman/tambah',
+                    url: '<?php echo base_url(); ?>/DataPeminjaman/tambah',
                     method: 'post',
                     data: {aksi:aksi},
                     success:function(data){
@@ -80,11 +83,11 @@
 
                 $('.edit').click(function(){
 
-                    var idSalesman = $(this).attr("idSalesman");
+                    var idPeminjaman = $(this).attr("idPeminjaman");
                     $.ajax({
-                        url: '<?php echo base_url(); ?>/DataSalesman/edit',
+                        url: '<?php echo base_url(); ?>/DataPeminjaman/edit',
                         method: 'post',
-                        data: {idSalesman:idSalesman},
+                        data: {idPeminjaman:idPeminjaman},
                         success:function(data){
                             $('#myModal').modal("show");
                             $('#tampil_modal').html(data);
@@ -95,11 +98,11 @@
 
                 $('.hapus').click(function(){
 
-                    var idSalesman = $(this).attr("idSalesman");
+                    var idPeminjaman = $(this).attr("idPeminjaman");
                     $.ajax({
-                        url: '<?php echo base_url(); ?>/DataSalesman/hapus',
+                        url: '<?php echo base_url(); ?>/DataPeminjaman/hapus',
                         method: 'post',
-                        data: {idSalesman:idSalesman},
+                        data: {idPeminjaman:idPeminjaman},
                         success:function(data){
                             $('#myModal').modal("show");
                             $('#tampil_modal').html(data);

@@ -9,7 +9,7 @@
 	}
 
 	public function tampilBuku(){
-        $data['buku']=$this->SalesModel->get_data('buku')->result();
+        $data['buku']=$this->bukuModel->get_data('buku')->result();
         $this->load->view('Buku/tableBuku',$data);
     }
 
@@ -32,7 +32,7 @@
 
     function edit(){
         $idBuku=$this->input->post('idBuku');
-        $data['hasil']=$this->SalesModel->GetidBuku($idBuku);
+        $data['hasil']=$this->bukuModel->GetidBuku($idBuku);
         $this->load->view('Buku/edit',$data);
     }
 
@@ -51,13 +51,12 @@
 
     function hapus(){
         $idBuku=$this->input->post('idBuku');
-        $data['hasil']=$this->SalesModel->GetidBuku($idBuku);
+        $data['hasil']=$this->bukuModel->GetidBuku($idBuku);
         $this->load->view('Buku/hapus',$data);
     }
 
     function hapusBuku(){
         $idBuku=$this->input->post('idBuku');
-        $this->db->delete('Buku',array('idBuku' => $idBuku));
         $a_procedure="CALL masterProcBuku(?,?,?,?,?,?,?,?,?)";
         $a_result=$this->db->query($a_procedure,array($idBuku,'','','','','','','','Delete'));
     }

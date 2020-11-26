@@ -1,30 +1,30 @@
 <div class="container-fluid">
 
-  <button type="button" class="tambah btn btn-sm btn-success mb-2"><i class="fas fa-plus">Tambah Data</i></button>
+<button type="button" class="tambah btn btn-sm btn-success mb-2"><i class="fas fa-plus">Tambah Data</i></button>
 <table class="table table-bordered table-stiped table-sm table-responsive-md mt-2">
   
   <thead class="thead-dark text-center">
     <tr>
-    <th >No</th>
-    <th >ID Property</th>
-    <th>Nama Property</th>
-    <th>Stock</th>
-    <th>Harga Unit</th>
+    <th >ID Anggota</th>
+    <th>Nama Anggota</th>
+    <th>Alamat</th>
+    <th>No. Telepon</th>
+    <th>Pekerjaan</th>
     <th>Aksi</th>
   </tr>
   </thead>
   <tbody>
-    <?php $no=1;foreach ($Property as $c): ?>
-    <tr class="bg-light">
-      <td align="center"><?php echo $no++; ?></td>
-      <td><?php echo $c->idProduk; ?></td>
-      <td><?php echo $c->namaProduk; ?></td>
-      <td align="center"><?php echo $c->stockProduk; ?></td>
-      <td>Rp. <?php echo number_format($c->hargaProduk,0,',','.'); ?></td>
+    <?php foreach ($Anggota as $c): ?>
+    <tr class="bg-light" align="center">
+      <td><?php echo $c->idAnggota; ?></td>
+      <td><?php echo $c->Nama; ?></td>
+      <td><?php echo $c->Alamat; ?></td>
+      <td><?php echo $c->noTlepon; ?></td>
+      <td><?php echo $c->Pekerjaan; ?></td>
       <td>
         <center>
-          <button type="button" idProduk="<?php echo $c->idProduk; ?>" class="edit btn btn-warning"><i class="fas fa-edit"></i></button>
-          <button type="button" idProduk="<?php echo $c->idProduk; ?>" class="hapus btn btn-danger"> <i class="fas fa-trash"></i></button>
+          <button type="button" idAnggota="<?php echo $c->idAnggota; ?>" class="edit btn btn-warning"><i class="fas fa-edit"></i></button>
+          <button type="button" idAnggota="<?php echo $c->idAnggota; ?>" class="hapus btn btn-danger"> <i class="fas fa-trash"></i></button>
         </center>
       </td>
     </tr>
@@ -34,7 +34,7 @@
 </div>
 
 <!-- The Modal -->
-        <div class="modal fade" id="myModal">
+        <div class="modal" id="myModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                 <!-- Modal Header -->
@@ -61,9 +61,9 @@
             $(document).ready(function(){
 
                 $('.tambah').click(function(){
-                var aksi = 'Tambah Property';
+                var aksi = 'Tambah Anggota';
                 $.ajax({
-                    url: '<?php echo base_url(); ?>/DataProperty/tambah',
+                    url: '<?php echo base_url(); ?>/DataAnggota/tambah',
                     method: 'post',
                     data: {aksi:aksi},
                     success:function(data){
@@ -77,11 +77,11 @@
 
                 $('.edit').click(function(){
 
-                    var idProduk = $(this).attr("idProduk");
+                    var idAnggota = $(this).attr("idAnggota");
                     $.ajax({
-                        url: '<?php echo base_url(); ?>/DataProperty/edit',
+                        url: '<?php echo base_url(); ?>/DataAnggota/edit',
                         method: 'post',
-                        data: {idProduk:idProduk},
+                        data: {idAnggota:idAnggota},
                         success:function(data){
                             $('#myModal').modal("show");
                             $('#tampil_modal').html(data);
@@ -92,11 +92,11 @@
 
                 $('.hapus').click(function(){
 
-                    var idProduk = $(this).attr("idProduk");
+                    var idAnggota = $(this).attr("idAnggota");
                     $.ajax({
-                        url: '<?php echo base_url(); ?>/DataProperty/hapus',
+                        url: '<?php echo base_url(); ?>/DataAnggota/hapus',
                         method: 'post',
-                        data: {idProduk:idProduk},
+                        data: {idAnggota:idAnggota},
                         success:function(data){
                             $('#myModal').modal("show");
                             $('#tampil_modal').html(data);
