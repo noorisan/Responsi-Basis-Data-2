@@ -2,7 +2,7 @@
       <footer class="sticky-footer fixed-bottom">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; PT. INDONESIA PROPERTY 2020</span>
+            <span>Copyright &copy; PERPUSTAKAAN DAERAH 2020</span>
           </div>
         </div>
       </footer>

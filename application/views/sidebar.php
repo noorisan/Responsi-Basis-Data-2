@@ -39,6 +39,12 @@
           <span>Peminjaman</span></a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('dataPetugas') ?>">
+          <i class="fas fa-users-cog"></i>
+          <span>Data Petugas</span></a>
+      </li>
+
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
