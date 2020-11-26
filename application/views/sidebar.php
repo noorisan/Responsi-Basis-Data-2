@@ -45,28 +45,6 @@
           <span>Data Petugas</span></a>
       </li>
 
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-copy"></i>
-          <span>Laporan</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?php echo base_url('admin/laporanGaji') ?>">Laporan Data Buku</a>
-            <a class="collapse-item" href="<?php echo base_url('admin/laporanAbsensi') ?>">Laporan Data Angggota</a>
-            <a class="collapse-item" href="<?php echo base_url('admin/slipGaji') ?>">Laporan Peminjaman</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() ?>">
-          <i class="fas fa-fw fa-sign-out-alt"></i>
-          <span>Logout</span></a>
-      </li>
-
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
